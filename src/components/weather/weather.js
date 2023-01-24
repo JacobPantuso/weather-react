@@ -53,7 +53,7 @@ const CardExampleCard = ({weatherData}) => (
         <div className='forecast'>
             <div className='forecast-header'>
                 <h2 className='city-name'>{weatherData[1].name}</h2>
-                <h3>{new Date().toLocaleString('en-US', {weekday: 'long', hour: 'numeric', minute: 'numeric', hour12: true})}, {weatherData[0].current.weather[0].description.split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')}</h3>
+                <h3>{new Date().toLocaleString('en-US', {weekday: 'long', hour: 'numeric', minute: 'numeric', hour12: true})}</h3>
             </div>
             <div className='forecast-content'>
                 <div className='temp-container'>
