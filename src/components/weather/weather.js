@@ -79,7 +79,7 @@ const CardExampleCard = ({weatherData}) => (
                         <img src={require('./rain.gif')} alt="pop-gif" className='inner-detail-img'></img>
                         <p>P.O.P</p>
                         <hr></hr>
-                        <p id='precipitation'>{(weatherData[0].daily[0].pop)*100}%</p>
+                        <p id='precipitation'>{Math.round((weatherData[0].daily[0].pop)*100)}%</p>
                     </div>
             </div>
         </div>
