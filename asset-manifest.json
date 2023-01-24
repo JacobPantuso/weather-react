@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weather-react/static/css/main.c32a9fe8.css",
+    "main.css": "/weather-react/static/css/main.714d4aba.css",
     "main.js": "/weather-react/static/js/main.43559fcc.js",
     "static/js/787.13d76ca7.chunk.js": "/weather-react/static/js/787.13d76ca7.chunk.js",
     "static/media/brand-icons.svg": "/weather-react/static/media/brand-icons.6729d29753e000c17489.svg",
@@ -23,12 +23,12 @@
     "static/media/outline-icons.woff": "/weather-react/static/media/outline-icons.ddae9b1ba9b0b42f5880.woff",
     "static/media/outline-icons.woff2": "/weather-react/static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "index.html": "/weather-react/index.html",
-    "main.c32a9fe8.css.map": "/weather-react/static/css/main.c32a9fe8.css.map",
+    "main.714d4aba.css.map": "/weather-react/static/css/main.714d4aba.css.map",
     "main.43559fcc.js.map": "/weather-react/static/js/main.43559fcc.js.map",
     "787.13d76ca7.chunk.js.map": "/weather-react/static/js/787.13d76ca7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c32a9fe8.css",
+    "static/css/main.714d4aba.css",
     "static/js/main.43559fcc.js"
   ]
 }
