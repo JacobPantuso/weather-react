@@ -1,4 +1,4 @@
-<p align=center><img src="https://raw.githubusercontent.com/JacobPantuso/weather-react/main/src/components/weather/weather-banner.png"></p>
+<p align=center><img src="https://i.imgur.com/A4sPLPs.png"></p>
 <hr>
 <h3>What is Weather React?</h3>
 <b>Weather React</b> is a data-driven weather webpage built with ReactJS. It uses <a href="https://openweathermap.org">OpenWeatherAPI</a> to fetch the weather of the current location of the user. Here is a preview of the page:
