@@ -13,18 +13,11 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       // use cached result if available (if user has already allowed location services)
-      if (localStorage.getItem('lat') && localStorage.getItem('long')) {
-        setLat(localStorage.getItem('lat'));
-        setLong(localStorage.getItem('long'));
-      } else {
         // otherwise, get location from browser
         navigator.geolocation.getCurrentPosition(function(position) {
           setLat(position.coords.latitude);
           setLong(position.coords.longitude);
-          localStorage.setItem('lat', position.coords.latitude);
-          localStorage.setItem('long', position.coords.longitude);
         });
-      }
     await
     fetch(`${process.env.REACT_APP_API_URL}/onecall?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)      
       .then(res => res.json())
