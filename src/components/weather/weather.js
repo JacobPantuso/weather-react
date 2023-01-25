@@ -52,7 +52,7 @@ function WeatherAlert({ weatherData }) {
         return (
             <div onClick={() => { if (!open) toggleOpen(); }} className='alert-card'>
                 <div className='alert-header'>
-                    <img src={require("./warning-icon.png")} alt='warning-icon' className='warning-icon' />
+                    <img src={require("../../images/warning-icon.png")} alt='warning-icon' className='warning-icon' />
                     <h3>Weather Alert</h3>
                 </div>
                 <p>{data.event.charAt(0).toUpperCase() + data.event.slice(1)} Warning issued by {data.sender_name}</p>
@@ -84,21 +84,21 @@ function HourlyForecast({weatherData}) {
             <div className='detail-row'>
                 <div className='inner-detail'>
                     <p>{new Date(weatherData[1].dt * 1000).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</p>
-                    <img src={require(`./${weatherIcons[weatherData[1].weather[0].icon]}`)} alt="weather-icon"></img>
+                    <img src={require(`../../images/${weatherIcons[weatherData[1].weather[0].icon]}`)} alt="weather-icon"></img>
                     <p>{Math.round(weatherData[1].temp)} &deg;C</p>
                     <hr></hr>
                     <p id='snow'>{precip[0]} {precip_type[0]}</p>
                 </div>
                 <div className='inner-detail'>
                     <p>{new Date(weatherData[2].dt * 1000).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</p>
-                    <img src={require(`./${weatherIcons[weatherData[2].weather[0].icon]}`)} alt="weather-icon"></img>
+                    <img src={require(`../../images/${weatherIcons[weatherData[2].weather[0].icon]}`)} alt="weather-icon"></img>
                     <p>{Math.round(weatherData[2].temp)} &deg;C</p>
                     <hr></hr>
                     <p id='snow'>{precip[1]} {precip_type[1]}</p>
                 </div>
                 <div className='inner-detail'>
                     <p>{new Date(weatherData[3].dt * 1000).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</p>
-                    <img src={require(`./${weatherIcons[weatherData[3].weather[0].icon]}`)} alt="weather-icon"></img>
+                    <img src={require(`../../images/${weatherIcons[weatherData[3].weather[0].icon]}`)} alt="weather-icon"></img>
                     <p>{Math.round(weatherData[3].temp)} &deg;C</p>
                     <hr></hr>
                     <p id='snow'>{precip[2]} {precip_type[2]}</p>
@@ -115,21 +115,21 @@ function FutureForecast({weatherData}) {
             <div className='detail-row'>
                 <div className='inner-detail'>
                     <p>{new Date(weatherData[0].daily[1].dt * 1000).toLocaleString('en-US', { weekday: 'long' })}</p>
-                    <img src={require(`./${weatherIcons[weatherData[0].daily[1].weather[0].icon]}`)} alt="weather-icon"></img>
+                    <img src={require(`../../images/${weatherIcons[weatherData[0].daily[1].weather[0].icon]}`)} alt="weather-icon"></img>
                     <p>{Math.round(weatherData[0].daily[1].temp.day)} &deg;C</p>
                     <hr></hr>
                     <p id='precipitation'>{(weatherData[0].daily[1].pop) * 100}%</p>
                 </div>
                 <div className='inner-detail'>
                     <p>{new Date(weatherData[0].daily[2].dt * 1000).toLocaleString('en-US', { weekday: 'long' })}</p>
-                    <img src={require(`./${weatherIcons[weatherData[0].daily[2].weather[0].icon]}`)} alt="weather-icon"></img>
+                    <img src={require(`../../images/${weatherIcons[weatherData[0].daily[2].weather[0].icon]}`)} alt="weather-icon"></img>
                     <p>{Math.round(weatherData[0].daily[2].temp.day)} &deg;C</p>
                     <hr></hr>
                     <p id='precipitation'>{(weatherData[0].daily[2].pop) * 100}%</p>
                 </div>
                 <div className='inner-detail'>
                     <p>{new Date(weatherData[0].daily[3].dt * 1000).toLocaleString('en-US', { weekday: 'long' })}</p>
-                    <img src={require(`./${weatherIcons[weatherData[0].daily[3].weather[0].icon]}`)} alt="weather-icon"></img>
+                    <img src={require(`../../images/${weatherIcons[weatherData[0].daily[3].weather[0].icon]}`)} alt="weather-icon"></img>
                     <p>{Math.round(weatherData[0].daily[3].temp.day)} &deg;C</p>
                     <hr></hr>
                     <p id='precipitation'>{(weatherData[0].daily[3].pop) * 100}%</p>
@@ -154,25 +154,25 @@ const Forecast = ({ weatherData }) => (
                 <div className='forecast-content'>
                     <div className='temp-container'>
                         <h3>{Math.round(weatherData[0].current.temp)} &deg;C</h3>
-                        <img src={require(`./${weatherIcons[weatherData[0].current.weather[0].icon]}`)} alt="weather-icon"></img>
+                        <img src={require(`../../images/${weatherIcons[weatherData[0].current.weather[0].icon]}`)} alt="weather-icon"></img>
                     </div>
                     <p className='description'>{descriptions[weatherData[0].current.weather[0].icon]}</p>
                 </div>
                 <div className='detail-row'>
                     <div className='inner-detail'>
-                        <img src={require('./wind.gif')} alt="wind-gif" className='inner-detail-img'></img>
+                        <img src={require('../../images/wind.gif')} alt="wind-gif" className='inner-detail-img'></img>
                         <p>Wind</p>
                         <hr></hr>
                         <p id='windspeed'>{Math.round(weatherData[0].current.wind_speed)} km/h</p>
                     </div>
                     <div className='inner-detail'>
-                        <img src={require('./feels-like.gif')} alt="pop-gif" className='feels-like'></img>
+                        <img src={require('../../images/feels-like.gif')} alt="pop-gif" className='feels-like'></img>
                         <p>Feels Like</p>
                         <hr></hr>
                         <p id='feels-like'>{Math.round(weatherData[0].current.feels_like)} &deg;C</p>
                     </div>
                     <div className='inner-detail'>
-                        <img src={require('./rain.gif')} alt="pop-gif" className='inner-detail-img'></img>
+                        <img src={require('../../images/rain.gif')} alt="pop-gif" className='inner-detail-img'></img>
                         <p>P.O.P</p>
                         <hr></hr>
                         <p id='precipitation'>{Math.round((weatherData[0].daily[0].pop) * 100)}%</p>

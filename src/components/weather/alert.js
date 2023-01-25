@@ -13,7 +13,7 @@ function Alert({ data, open, toggleOpen }) {
             trigger={<p><b>Click here for more details.</b></p>}
         >
             <Header icon>
-                <img src={require("./warning-icon.png")} alt='warning-icon' className='warning-icon' />
+                <img src={require('../../images/warning-icon.png')} alt='warning-icon' className='warning-icon' />
                 {data.event.charAt(0).toUpperCase() + data.event.slice(1)} Warning issued by {data.sender_name}
             </Header>
             <Modal.Content>
