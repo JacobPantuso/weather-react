@@ -1,6 +1,5 @@
 .main {
     height: 100%;
-    margin: 10px;
     gap: 20px;
     display: flex;
     flex-direction: column;
@@ -169,6 +168,9 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+    .main {
+        margin: 30px;
+    }
     .container {
         flex-direction: column;
     }

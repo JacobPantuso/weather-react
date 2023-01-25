@@ -20,6 +20,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  #root {
+    height: auto;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

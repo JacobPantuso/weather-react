@@ -39,7 +39,6 @@ export default function App() {
     
     <div className="App">
       {(typeof data.current != 'undefined') ? (
-        console.log(data),
         <Weather weatherData={array}/>
       ): (
         <div>

@@ -68,7 +68,6 @@ function HourlyForecast({weatherData}) {
     for (var i=1; i<4; i++) {
         // check to see if weatherData[i] has a snow property
         if (weatherData[i].snow) {
-            console.log(weatherData[i]);
             precip[i-1] = weatherData[i].snow['1h'];
             precip_type[i-1] = "cm";
         } else if (weatherData[i].rain) {
