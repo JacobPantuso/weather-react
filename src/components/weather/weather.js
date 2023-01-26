@@ -46,6 +46,9 @@ const descriptions = {
 
 function WeatherAlert({ weatherData }) {
     const [open, setOpen] = React.useState(false)
+    if (weatherData.alerts === undefined) {
+        return null;
+    }
     if (weatherData.alerts.length > 0) {
         var data = weatherData.alerts[0];
         const toggleOpen = () => setOpen(!open);
@@ -75,7 +78,7 @@ function HourlyForecast({weatherData}) {
             precip_type[i-1] = "mm";
         } else {
             precip[i-1] = 0;
-            precip_type[i-1] = '';
+            precip_type[i-1] = 'mm';
         }
     }
     return (
@@ -118,21 +121,21 @@ function FutureForecast({weatherData}) {
                     <img src={require(`../../images/${weatherIcons[weatherData[0].daily[1].weather[0].icon]}`)} alt="weather-icon"></img>
                     <p>{Math.round(weatherData[0].daily[1].temp.day)} &deg;C</p>
                     <hr></hr>
-                    <p id='precipitation'>{(weatherData[0].daily[1].pop) * 100}%</p>
+                    <p id='precipitation'>{Math.round((weatherData[0].daily[1].pop) * 100)}%</p>
                 </div>
                 <div className='inner-detail'>
                     <p>{new Date(weatherData[0].daily[2].dt * 1000).toLocaleString('en-US', { weekday: 'long' })}</p>
                     <img src={require(`../../images/${weatherIcons[weatherData[0].daily[2].weather[0].icon]}`)} alt="weather-icon"></img>
                     <p>{Math.round(weatherData[0].daily[2].temp.day)} &deg;C</p>
                     <hr></hr>
-                    <p id='precipitation'>{(weatherData[0].daily[2].pop) * 100}%</p>
+                    <p id='precipitation'>{Math.round((weatherData[0].daily[2].pop) * 100)}%</p>
                 </div>
                 <div className='inner-detail'>
                     <p>{new Date(weatherData[0].daily[3].dt * 1000).toLocaleString('en-US', { weekday: 'long' })}</p>
                     <img src={require(`../../images/${weatherIcons[weatherData[0].daily[3].weather[0].icon]}`)} alt="weather-icon"></img>
                     <p>{Math.round(weatherData[0].daily[3].temp.day)} &deg;C</p>
                     <hr></hr>
-                    <p id='precipitation'>{(weatherData[0].daily[3].pop) * 100}%</p>
+                    <p id='precipitation'>{Math.round((weatherData[0].daily[3].pop) * 100)}%</p>
                 </div>
             </div>
         </div>
